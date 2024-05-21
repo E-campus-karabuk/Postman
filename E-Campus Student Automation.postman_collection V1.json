@@ -1,0 +1,4980 @@
+{
+	"info": {
+		"_postman_id": "3230e232-c4e3-4b00-a5ab-feb7885e9001",
+		"name": "Student Automation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28985639",
+		"_collection_link": "https://universal-moon-734159.postman.co/workspace/New-Team-Workspace~ed1bc44c-1ae6-431c-ace3-ab04bac8b4f0/collection/24940764-3230e232-c4e3-4b00-a5ab-feb7885e9001?action=share&source=collection_link&creator=28985639"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"testAcademician@karabuk.edu.tr\",\r\n  \"password\" : \"123456\",\r\n  \"firstName\":\"munannad\",\r\n  \"lastName\" : \"Zubi\",\r\n  \"registerNo\" : \"20122134555\",\r\n  \"phone\" : \"05385441726\",\r\n  \"sex\": \"male\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "sichiiopvp@gmail.com",
+									"disabled": true
+								}
+							]
+						},
+						"description": "to regester a user, include all the body fields. password should be more than or equal to 6 digits"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"example2@example.com\",\r\n    \"password\" : \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"example2@example.com\",\r\n    \"password\" : \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "283"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11b-Y3ktZgVx1Vs1YLX/9u4sUUfFlg8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 22 Apr 2024 17:20:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"example2@example.com\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiU3R1ZGVudCJdLCJpYXQiOjE3MTM4MDY0MDEsImV4cCI6MTcxNjM5ODQwMX0.ZY6JUccjmoFv8sy19rGGDqMc4F8aOVFUoHjry5E69PM\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzAzMTc0ODMyLCJleHAiOjE3MDU3NjY4MzJ9.5V4m1-7KCPHmMJ7gkEEtX6ssGtVKH45795UuwGIwf08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3060/api/auth/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								""
+							]
+						},
+						"description": "this api is only accessable to Admins. make sure to include the jwt token in the Authorization field in the headers."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Current User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzAzMTc0ODMyLCJleHAiOjE3MDU3NjY4MzJ9.5V4m1-7KCPHmMJ7gkEEtX6ssGtVKH45795UuwGIwf08",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3060/api/auth/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"current"
+							]
+						},
+						"description": "this api is only accessable to Admins. make sure to include the jwt token in the Authorization field in the headers."
+					},
+					"response": [
+						{
+							"name": "Get Current User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzAzMTc0ODMyLCJleHAiOjE3MDU3NjY4MzJ9.5V4m1-7KCPHmMJ7gkEEtX6ssGtVKH45795UuwGIwf08",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/auth/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"auth",
+										"current"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "709"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c5-u22ubGVQgBNS0fz4fBT8gq5LIfA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 02 May 2024 19:04:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"66269caad76211ec08acbd86\",\n        \"user\": \"658adabbf2ae9d4ceaf477ca\",\n        \"yearOfStudy\": \"2020\",\n        \"gpa\": 3.14,\n        \"agpa\": 3.49,\n        \"department\": \"Computer Engineering\",\n        \"faculty\": \"Enginnering Faculty\",\n        \"sex\": \"male\",\n        \"level\": 3,\n        \"createdAt\": \"2024-04-22T17:21:46.657Z\",\n        \"updatedAt\": \"2024-04-22T17:21:46.657Z\",\n        \"__v\": 0,\n        \"departmentId\": \"662d50181f38aaa936d3468f\"\n    },\n    \"user\": {\n        \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n        \"firstName\": \"munannad\",\n        \"lastName\": \"Zubi\",\n        \"email\": \"example2@example.com\",\n        \"password\": \"$2b$10$7WX2QbqW/G2cCYBDu/I/velxxxBwQRKqmC2V.LxRr576Gm1i1kIHm\",\n        \"registerNo\": \"20102134555\",\n        \"phone\": \"05385441726\",\n        \"permissions\": [\n            \"Student\"\n        ],\n        \"avatarPath\": \"null\",\n        \"createdAt\": \"2023-12-26T13:52:59.927Z\",\n        \"updatedAt\": \"2023-12-26T13:52:59.927Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Role",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"permission\" : \"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/auth/addRole/658449741c2c863c8b2cd423",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"addRole",
+								"658449741c2c863c8b2cd423"
+							]
+						},
+						"description": "this api is only accessable to Admins. make sure to include the jwt token in the Authorization field in the headers."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzAzMTc0ODMyLCJleHAiOjE3MDU3NjY4MzJ9.5V4m1-7KCPHmMJ7gkEEtX6ssGtVKH45795UuwGIwf08",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"permission\" :\"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/auth/deleteRole/658449741c2c863c8b2cd423",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"auth",
+								"deleteRole",
+								"658449741c2c863c8b2cd423"
+							]
+						},
+						"description": "this api is only accessable to Admins. make sure to include the jwt token in the Authorization field in the headers."
+					},
+					"response": []
+				}
+			],
+			"description": "All authentication Apis"
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Current Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOltdLCJpYXQiOjE3MTM3MjY4MDEsImV4cCI6MTcxNjMxODgwMX0.YyDQ4W-MTUN293UnywQRvSNxz5QAVtxl35dhQytuYjo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOltdLCJpYXQiOjE3MTM3MjY4MDEsImV4cCI6MTcxNjMxODgwMX0.YyDQ4W-MTUN293UnywQRvSNxz5QAVtxl35dhQytuYjo",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/student/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"student",
+										"current"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Current Student",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOltdLCJpYXQiOjE3MTM3MjY4MDEsImV4cCI6MTcxNjMxODgwMX0.YyDQ4W-MTUN293UnywQRvSNxz5QAVtxl35dhQytuYjo",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "http://localhost:3060/api/student/current",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3060",
+											"path": [
+												"api",
+												"student",
+												"current"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "564"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"234-MnMLZdoR9qmuQqY8ezdzEn2Htrg\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 16:28:33 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"_id\": \"65941365ba24465e57d66704\",\n        \"user\": \"658adabbf2ae9d4ceaf477ca\",\n        \"yearOfStudy\": \"2020\",\n        \"gpa\": 3.14,\n        \"createdAt\": \"2024-01-02T13:45:09.374Z\",\n        \"updatedAt\": \"2024-01-02T13:45:09.374Z\",\n        \"__v\": 0\n    },\n    \"user\": {\n        \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n        \"firstName\": \"munannad\",\n        \"lastName\": \"Zubi\",\n        \"email\": \"example2@example.com\",\n        \"password\": \"$2b$10$7WX2QbqW/G2cCYBDu/I/velxxxBwQRKqmC2V.LxRr576Gm1i1kIHm\",\n        \"registerNo\": \"20102134555\",\n        \"phone\": \"05385441726\",\n        \"permissions\": [\n            \"Student\"\n        ],\n        \"avatarPath\": \"null\",\n        \"createdAt\": \"2023-12-26T13:52:59.927Z\",\n        \"updatedAt\": \"2023-12-26T13:52:59.927Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Create Student",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"gpa\" :\"3.14\",\r\n    \"yearOfStudy\" : \"2020\",\r\n    \"agpa\" : \"3.49\",\r\n    \"sex\" : \"male\",\r\n    \"department\" : \"Computer Engineering\",\r\n    \"faculty\" : \"Enginnering Faculty\",\r\n    \"level\" : \"3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/student/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"student",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create Student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"gpa\" :\"3.14\",\r\n    \"yearOfStudy\" : \"2020\",\r\n    \"agpa\" : \"3.49\",\r\n    \"sex\" : \"male\",\r\n    \"department\" : \"Computer Engineering\",\r\n    \"faculty\" : \"Enginnering Faculty\",\r\n    \"level\" : \"3\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3060/api/student/create",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3060",
+											"path": [
+												"api",
+												"student",
+												"create"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "289"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"121-uib847tC/uemJS1JebqYZN7bzWY\""
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 22 Apr 2024 17:21:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"user\": \"658adabbf2ae9d4ceaf477ca\",\n    \"yearOfStudy\": \"2020\",\n    \"gpa\": 3.14,\n    \"agpa\": 3.49,\n    \"department\": \"Computer Engineering\",\n    \"faculty\": \"Enginnering Faculty\",\n    \"sex\": \"male\",\n    \"level\": 3,\n    \"_id\": \"66269caad76211ec08acbd86\",\n    \"createdAt\": \"2024-04-22T17:21:46.657Z\",\n    \"updatedAt\": \"2024-04-22T17:21:46.657Z\",\n    \"__v\": 0\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Academician",
+					"item": [
+						{
+							"name": "Create Academician",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"employmentHistory\" : \"2019\",\r\n    \"officeNo\" : \"210\",\r\n    \"officeHours\" : [\"20:30\",\"14:30\"],\r\n    \"graduatedUni\" : \"Teknik Yildiz\",\r\n    \"position\" : \"prof\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/academician/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"academician",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Current Academician",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/academician/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"academician",
+										"current"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get One By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/academician/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"academician",
+										"current"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Current Admin",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/admin/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"admin",
+										"current"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Admin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NDk3NDFjMmM4NjNjOGIyY2Q0MjMiLCJlbWFpbCI6ImV4YW1wbGVAZXhhbXBsZS5jb20iLCJyb2xlcyI6WyJTdHVkZW50IiwiQWRtaW4iXSwiaWF0IjoxNzA0MTQ2MzU5LCJleHAiOjE3MDY3MzgzNTl9.3C_5HGwJvS38iJ0uHe_3qJdIB1UXIeKxc35gek4uNa4a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/admin/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"admin",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Faculty",
+			"item": [
+				{
+					"name": "Get Faculty By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/faculty/6628d47f9238900db3b61e5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"faculty",
+								"6628d47f9238900db3b61e5c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Faculty By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/faculty/6628d47f9238900db3b61e5c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"faculty",
+										"6628d47f9238900db3b61e5c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-Au5iysf3XYaKkhhdOTHL/Mqu7pg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:03:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6628d47f9238900db3b61e5c\",\n    \"name\": \"Engineering Faculty\",\n    \"description\": \"This faculty focuses on engineering disciplines such as mechanical, electrical, and civil engineering.\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Faculties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/faculty/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"faculty",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Faculties",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/faculty/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"faculty",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c0-KOp2zt/yEYX2ppqFhShhc1OMyZ8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:03:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6628d47f9238900db3b61e5c\",\n        \"name\": \"Engineering Faculty\",\n        \"description\": \"This faculty focuses on engineering disciplines such as mechanical, electrical, and civil engineering.\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Faculty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Engineering Faculty\",\r\n  \"description\": \"This faculty focuses on engineering disciplines such as mechanical, electrical, and civil engineering.\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/faculty/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"faculty",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Faculty",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Engineering Faculty\",\r\n  \"description\": \"This faculty focuses on engineering disciplines such as mechanical, electrical, and civil engineering.\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/faculty/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"faculty",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-gnJ6JInhzSMyx743ZZOyNpKHvp0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 09:44:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Engineering Faculty\",\n    \"description\": \"This faculty focuses on engineering disciplines such as mechanical, electrical, and civil engineering.\",\n    \"_id\": \"6628d47f9238900db3b61e5c\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Faculty",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseName\": \"Introduction to Computer Science\",\r\n  \"courseCode\": \"CS101\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Monday\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"departmentObjectIdHere\",\r\n  \"lecturer\": [\"lecturerObjectIdHere\"],\r\n  \"student\": [\"studentObjectIdHere\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/faculty/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"faculty",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Faculty",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/faculty/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"faculty",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get Department By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/department/6628d4a39238900db3b61e5e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"6628d4a39238900db3b61e5e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Department By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/department/6628d4a39238900db3b61e5e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"6628d4a39238900db3b61e5e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "423"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a7-yHRybWDt5654wrapyTOTljAVdRo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:04:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6628d4a39238900db3b61e5e\",\n    \"name\": \"Computer Science\",\n    \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n    \"description\": \"The Computer Science department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-24T09:45:07.168Z\",\n    \"updatedAt\": \"2024-04-24T09:45:07.168Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiU3R1ZGVudCJdLCJpYXQiOjE3MTQyNDY0NzMsImV4cCI6MTcxNjgzODQ3M30.p_Rh_O9pWn7aWXb6ql_U4nulRay1YT-P8kKiysBo8F8",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3060/api/department/userDepartment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"userDepartment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Student Department",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NThhZGFiYmYyYWU5ZDRjZWFmNDc3Y2EiLCJlbWFpbCI6ImV4YW1wbGUyQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiU3R1ZGVudCJdLCJpYXQiOjE3MTQyNDY0NzMsImV4cCI6MTcxNjgzODQ3M30.p_Rh_O9pWn7aWXb6ql_U4nulRay1YT-P8kKiysBo8F8",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3060/api/department/userDepartment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"userDepartment"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1112"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"458-gEC6FPh+d9hsUC286rqiinS78Wk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Apr 2024 19:36:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"662d50181f38aaa936d3468f\",\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. Oguz Findik\",\n            \"position\": \"Head Of Dpeartment\",\n            \"email\": \"oguzfindik@karabuk.edu.tr\",\n            \"phone\": \"+905385441777\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34690\"\n        },\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34691\"\n        },\n        {\n            \"name\": \"Dr. Nisreen Atasoy\",\n            \"position\": \"Lecturer\",\n            \"email\": \"nisreenatasoy@karabuk.edu.tr\",\n            \"phone\": \"+905386657823\",\n            \"sex\": \"female\",\n            \"_id\": \"662d50181f38aaa936d34692\"\n        },\n        {\n            \"name\": \"Prof. Burhan Selcuk\",\n            \"position\": \"lecturer\",\n            \"email\": \"burhanselcuk@karabuk.edu.tr\",\n            \"phone\": \"+905387766232\",\n            \"sex\": \"male\",\n            \"_id\": \"662d502e1f38aaa936d34697\",\n            \"__v\": 0\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-27T19:20:56.786Z\",\n    \"updatedAt\": \"2024-04-27T19:21:18.455Z\",\n    \"__v\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Departments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/department/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Departments",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/department/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "425"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a9-5wCGoq/xgi+/E8OpcX6jlkMpDeI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:04:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6628d4a39238900db3b61e5e\",\n        \"name\": \"Computer Science\",\n        \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n        \"description\": \"The Computer Science department focuses on programming, algorithms, and computer systems.\",\n        \"faculty\": \"6628d47f9238900db3b61e5c\",\n        \"achievements\": [\n            \"First place in national coding competition\",\n            \"Published research papers\"\n        ],\n        \"createdAt\": \"2024-04-24T09:45:07.168Z\",\n        \"updatedAt\": \"2024-04-24T09:45:07.168Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Computer Engineering\",\r\n  \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\", // This should be a valid ObjectId referencing a User\r\n  \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\r\n  \"faculty\": \"6628d47f9238900db3b61e5c\", // This should be a valid ObjectId referencing a Faculty\r\n  \"achievements\": [\"First place in national coding competition\", \"Published research papers\"],\r\n  \"workers\" : [{\"name\" : \"Prof. Oguz Findik\", \"sex\" :\"male\", \"email\" : \"oguzfindik@karabuk.edu.tr\", \"phone\" : \"+905385441777\", \"position\" : \"Head Of Dpeartment\"}, {\"name\" : \"Prof. iLhami Muharrem\",\"sex\" : \"male\", \"email\" : \"ilhamimuharrem@karabuk.edu.tr\", \"phone\" : \"+905385422763\", \"position\" : \"Erasmus+ Head\"},{\"name\" : \"Dr. Nisreen Atasoy\", \"email\" : \"nisreenatasoy@karabuk.edu.tr\", \"phone\" : \"+905386657823\", \"position\" : \"Lecturer\", \"sex\": \"female\"}]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/department/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Department",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Computer Engineering\",\r\n  \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\", // This should be a valid ObjectId referencing a User\r\n  \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\r\n  \"faculty\": \"6628d47f9238900db3b61e5c\", // This should be a valid ObjectId referencing a Faculty\r\n  \"achievements\": [\"First place in national coding competition\", \"Published research papers\"],\r\n  \"workers\" : [{\"name\" : \"Prof. Oguz Findik\", \"email\" : \"oguzfindik@karabuk.edu.tr\", \"phone\" : \"+905385441777\", \"position\" : \"Head Of Dpeartment\"}, {\"name\" : \"Prof. iLhami Muharrem\", \"email\" : \"ilhamimuharrem@karabuk.edu.tr\", \"phone\" : \"+905385422763\", \"position\" : \"Erasmus+ Head\"}]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/department/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "754"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f2-zJRjb3DBFqOIhtIbTsbfpQsNwPQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Apr 2024 19:00:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. Oguz Findik\",\n            \"position\": \"Head Of Dpeartment\",\n            \"email\": \"oguzfindik@karabuk.edu.tr\",\n            \"phone\": \"+905385441777\",\n            \"_id\": \"662d4b3b4d2eb84c17625aa5\"\n        },\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"_id\": \"662d4b3b4d2eb84c17625aa6\"\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"_id\": \"662d4b3b4d2eb84c17625aa4\",\n    \"createdAt\": \"2024-04-27T19:00:11.336Z\",\n    \"updatedAt\": \"2024-04-27T19:00:11.336Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseName\": \"Introduction to Computer Science\",\r\n  \"courseCode\": \"CS101\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Monday\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"departmentObjectIdHere\",\r\n  \"lecturer\": [\"lecturerObjectIdHere\"],\r\n  \"student\": [\"studentObjectIdHere\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/department/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/department/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Worker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Prof. Burhan Selcuk\",\r\n    \"email\" : \"burhanselcuk@karabuk.edu.tr\",\r\n    \"phone\" : \"+905387766232\",\r\n    \"sex\" : \"male\",\r\n    \"position\": \"lecturer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/department/addWorker/662d4c2d1fbb4f66350ab8c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"addWorker",
+								"662d4c2d1fbb4f66350ab8c6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Prof. Burhan Selcuk\",\r\n    \"email\" : \"burhanselcuk@karabuk.edu.tr\",\r\n    \"phone\" : \"+905387766232\",\r\n    \"sex\" : \"male\",\r\n    \"position\": \"lecturer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/department/addWorker/662d4c2d1fbb4f66350ab8c6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"addWorker",
+										"662d4c2d1fbb4f66350ab8c6"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"459-QATIukdYK9ufA8/SjzFB0Wt4d9M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Apr 2024 19:11:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"662d4c2d1fbb4f66350ab8c6\",\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. Oguz Findik\",\n            \"position\": \"Head Of Dpeartment\",\n            \"email\": \"oguzfindik@karabuk.edu.tr\",\n            \"phone\": \"+905385441777\",\n            \"sex\": \" male\",\n            \"_id\": \"662d4c2d1fbb4f66350ab8c7\"\n        },\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"sex\": \"male\",\n            \"_id\": \"662d4c2d1fbb4f66350ab8c8\"\n        },\n        {\n            \"name\": \"Dr. Nisreen Atasoy\",\n            \"position\": \"Lecturer\",\n            \"email\": \"nisreenatasoy@karabuk.edu.tr\",\n            \"phone\": \"+905386657823\",\n            \"sex\": \"female\",\n            \"_id\": \"662d4c2d1fbb4f66350ab8c9\"\n        },\n        {\n            \"name\": \"Prof. Burhan Selcuk\",\n            \"position\": \"lecturer\",\n            \"email\": \"burhanselcuk@karabuk.edu.tr\",\n            \"phone\": \"+905387766232\",\n            \"sex\": \"male\",\n            \"_id\": \"662d4dcf1765f840ad51a28f\",\n            \"__v\": 0\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-27T19:04:13.604Z\",\n    \"updatedAt\": \"2024-04-27T19:11:11.248Z\",\n    \"__v\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Worker",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/department/deleteWorker/662d4c2d1fbb4f66350ab8c6?workerId=662d4c2d1fbb4f66350ab8c7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"deleteWorker",
+								"662d4c2d1fbb4f66350ab8c6"
+							],
+							"query": [
+								{
+									"key": "workerId",
+									"value": "662d4c2d1fbb4f66350ab8c7"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteWorker",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/department/deleteWorker/662d4c2d1fbb4f66350ab8c6?workerId=662d4c2d1fbb4f66350ab8c7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"deleteWorker",
+										"662d4c2d1fbb4f66350ab8c6"
+									],
+									"query": [
+										{
+											"key": "workerId",
+											"value": "662d4c2d1fbb4f66350ab8c7"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "945"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b1-uFxD2Gz3rKw4B3P3xoACh1FYPlk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 27 Apr 2024 19:16:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"662d4c2d1fbb4f66350ab8c6\",\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"60f3d2a3c6e5c30015c3d0a1\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"sex\": \"male\",\n            \"_id\": \"662d4c2d1fbb4f66350ab8c8\"\n        },\n        {\n            \"name\": \"Dr. Nisreen Atasoy\",\n            \"position\": \"Lecturer\",\n            \"email\": \"nisreenatasoy@karabuk.edu.tr\",\n            \"phone\": \"+905386657823\",\n            \"sex\": \"female\",\n            \"_id\": \"662d4c2d1fbb4f66350ab8c9\"\n        },\n        {\n            \"name\": \"Prof. Burhan Selcuk\",\n            \"position\": \"lecturer\",\n            \"email\": \"burhanselcuk@karabuk.edu.tr\",\n            \"phone\": \"+905387766232\",\n            \"sex\": \"male\",\n            \"_id\": \"662d4dcf1765f840ad51a28f\",\n            \"__v\": 0\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-27T19:04:13.604Z\",\n    \"updatedAt\": \"2024-04-27T19:16:37.732Z\",\n    \"__v\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Corse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Algorithms\",\r\n    \"code\" : \"BSM204\",\r\n    \"year\" : \"2\", // 1. 2. 3. 4\r\n    \"semester\" : \"spring\" // fall - spring\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/department/addCorse/662d50181f38aaa936d3468f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"addCorse",
+								"662d50181f38aaa936d3468f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Corse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \"Mathematics I\",\r\n    \"code\" : \"CD35\",\r\n    \"year\" : \"1\", // 1. 2. 3. 4\r\n    \"semester\" : \"fall\", // fall - sepring\r\n    \"position\": \"lecturer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/department/addCorse/662d50181f38aaa936d3468f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"addCorse",
+										"662d50181f38aaa936d3468f"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1391"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"56f-ko9NxE/ob891Tr5rn4KN/MLP/gM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Apr 2024 19:17:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"662d50181f38aaa936d3468f\",\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"65844e8b6215f4553755773c\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. Oguz Findik\",\n            \"position\": \"Head Of Dpeartment\",\n            \"email\": \"oguzfindik@karabuk.edu.tr\",\n            \"phone\": \"+905385441777\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34690\"\n        },\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34691\"\n        },\n        {\n            \"name\": \"Dr. Nisreen Atasoy\",\n            \"position\": \"Lecturer\",\n            \"email\": \"nisreenatasoy@karabuk.edu.tr\",\n            \"phone\": \"+905386657823\",\n            \"sex\": \"female\",\n            \"_id\": \"662d50181f38aaa936d34692\"\n        },\n        {\n            \"name\": \"Prof. Burhan Selcuk\",\n            \"position\": \"lecturer\",\n            \"email\": \"burhanselcuk@karabuk.edu.tr\",\n            \"phone\": \"+905387766232\",\n            \"sex\": \"male\",\n            \"_id\": \"662d502e1f38aaa936d34697\",\n            \"__v\": 0\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-27T19:20:56.786Z\",\n    \"updatedAt\": \"2024-04-29T19:17:44.839Z\",\n    \"__v\": 2,\n    \"Secretary\": {\n        \"email\": \"ilkerugurli@karabuk.edu.tr\",\n        \"name\": \"Ilker Ugurlu\",\n        \"phone\": \"+905365475215\",\n        \"position\": \"Secretary of the departmentSecretay\",\n        \"sex\": \"male\"\n    },\n    \"corses\": [\n        {\n            \"name\": \"Mathematics I\",\n            \"code\": \"CD35\",\n            \"year\": \"1\",\n            \"semester\": \"fall\",\n            \"_id\": \"662ff25854c05aaf5e04d13b\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Corse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/department/deleteCorse/662d50181f38aaa936d3468f?corseId=662ff25854c05aaf5e04d13b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"department",
+								"deleteCorse",
+								"662d50181f38aaa936d3468f"
+							],
+							"query": [
+								{
+									"key": "corseId",
+									"value": "662ff25854c05aaf5e04d13b"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Coser",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/department/deleteCorse/662d50181f38aaa936d3468f?corseId=662ff25854c05aaf5e04d13b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"department",
+										"deleteCorse",
+										"662d50181f38aaa936d3468f"
+									],
+									"query": [
+										{
+											"key": "corseId",
+											"value": "662ff25854c05aaf5e04d13b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1283"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"503-h9P5inTQ2aQmK7kDb6fPlJ/E46I\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Apr 2024 19:18:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"662d50181f38aaa936d3468f\",\n    \"name\": \"Computer Engineering\",\n    \"departmentHead\": \"65844e8b6215f4553755773c\",\n    \"workers\": [\n        {\n            \"name\": \"Prof. Oguz Findik\",\n            \"position\": \"Head Of Dpeartment\",\n            \"email\": \"oguzfindik@karabuk.edu.tr\",\n            \"phone\": \"+905385441777\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34690\"\n        },\n        {\n            \"name\": \"Prof. iLhami Muharrem\",\n            \"position\": \"Erasmus+ Head\",\n            \"email\": \"ilhamimuharrem@karabuk.edu.tr\",\n            \"phone\": \"+905385422763\",\n            \"sex\": \"male\",\n            \"_id\": \"662d50181f38aaa936d34691\"\n        },\n        {\n            \"name\": \"Dr. Nisreen Atasoy\",\n            \"position\": \"Lecturer\",\n            \"email\": \"nisreenatasoy@karabuk.edu.tr\",\n            \"phone\": \"+905386657823\",\n            \"sex\": \"female\",\n            \"_id\": \"662d50181f38aaa936d34692\"\n        },\n        {\n            \"name\": \"Prof. Burhan Selcuk\",\n            \"position\": \"lecturer\",\n            \"email\": \"burhanselcuk@karabuk.edu.tr\",\n            \"phone\": \"+905387766232\",\n            \"sex\": \"male\",\n            \"_id\": \"662d502e1f38aaa936d34697\",\n            \"__v\": 0\n        }\n    ],\n    \"description\": \"The Computer Engineering department focuses on programming, algorithms, and computer systems.\",\n    \"faculty\": \"6628d47f9238900db3b61e5c\",\n    \"achievements\": [\n        \"First place in national coding competition\",\n        \"Published research papers\"\n    ],\n    \"createdAt\": \"2024-04-27T19:20:56.786Z\",\n    \"updatedAt\": \"2024-04-29T19:18:58.115Z\",\n    \"__v\": 3,\n    \"Secretary\": {\n        \"email\": \"ilkerugurli@karabuk.edu.tr\",\n        \"name\": \"Ilker Ugurlu\",\n        \"phone\": \"+905365475215\",\n        \"position\": \"Secretary of the departmentSecretay\",\n        \"sex\": \"male\"\n    },\n    \"corses\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Get Course By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/course/6628d5516813550f44f8d34d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"6628d5516813550f44f8d34d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Course By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/course/6628d5516813550f44f8d34d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"6628d5516813550f44f8d34d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-S8w+pE7/lyPV5JTeNDnw5fiI0kk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:00:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6628d5516813550f44f8d34d\",\n    \"courseName\": \"Introduction to Computer Science\",\n    \"courseCode\": \"CS101\",\n    \"credit\": 3,\n    \"year\": \"2024\",\n    \"term\": \"Spring\",\n    \"day\": \"Monday\",\n    \"time\": \"10:00 AM - 11:30 AM\",\n    \"department\": \"6628d4a39238900db3b61e5e\",\n    \"lecturer\": [\n        \"65844e8b6215f4553755773c\"\n    ],\n    \"student\": [\n        \"658adabbf2ae9d4ceaf477ca\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Course Notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/course/notes/6628d5516813550f44f8d34d?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"notes",
+								"6628d5516813550f44f8d34d"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Course Notes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/course/notes/6628d5516813550f44f8d34d?page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"notes",
+										"6628d5516813550f44f8d34d"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": "test",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1519"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5ef-1R9KfBTDl9Fyx8Eqo65tysUu5BE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 May 2024 19:38:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"notes\": [\n        {\n            \"_id\": \"6633fca8409b347f7d0be971\",\n            \"title\": \"test title2\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1714683048331.pdf\"\n            ],\n            \"createdAt\": \"2024-05-02T20:50:48.350Z\",\n            \"updatedAt\": \"2024-05-02T20:50:48.350Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"663d0029a747b076622d279f\",\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1715273769911.pdf\"\n            ],\n            \"createdAt\": \"2024-05-09T16:56:09.916Z\",\n            \"updatedAt\": \"2024-05-09T16:56:09.916Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"663d002aa747b076622d27a4\",\n            \"title\": \"test3 title\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1715273770960.pdf\"\n            ],\n            \"createdAt\": \"2024-05-09T16:56:10.965Z\",\n            \"updatedAt\": \"2024-05-09T16:56:10.965Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"663d002ca747b076622d27a9\",\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1715273772074.pdf\"\n            ],\n            \"createdAt\": \"2024-05-09T16:56:12.079Z\",\n            \"updatedAt\": \"2024-05-09T16:56:12.079Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"663d002da747b076622d27ae\",\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1715273773110.pdf\"\n            ],\n            \"createdAt\": \"2024-05-09T16:56:13.116Z\",\n            \"updatedAt\": \"2024-05-09T16:56:13.116Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"663d002ea747b076622d27b3\",\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"course\": \"6628d5516813550f44f8d34d\",\n            \"file\": [\n                \"uploads\\\\1715273774022.pdf\"\n            ],\n            \"createdAt\": \"2024-05-09T16:56:14.027Z\",\n            \"updatedAt\": \"2024-05-09T16:56:14.027Z\",\n            \"__v\": 0\n        }\n    ],\n    \"page\": \"1\",\n    \"pageSize\": 6,\n    \"totalCount\": 8,\n    \"totalPages\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/course/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Courses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/course/list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "633"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"279-CI1LtPuZkgamHtH0tU+uiKUkX/Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 09:58:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6628d5516813550f44f8d34d\",\n        \"courseName\": \"Introduction to Computer Science\",\n        \"courseCode\": \"CS101\",\n        \"credit\": 3,\n        \"year\": \"2024\",\n        \"term\": \"Spring\",\n        \"day\": \"Monday\",\n        \"time\": \"10:00 AM - 11:30 AM\",\n        \"department\": \"6628d4a39238900db3b61e5e\",\n        \"lecturer\": [\n            \"65844e8b6215f4553755773c\"\n        ],\n        \"student\": [\n            \"658adabbf2ae9d4ceaf477ca\"\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6628d5dcdab5d0965035cd06\",\n        \"courseName\": \"Introduction to Computer Science\",\n        \"courseCode\": \"CS101\",\n        \"credit\": 3,\n        \"year\": \"2024\",\n        \"term\": \"Spring\",\n        \"day\": \"Monday\",\n        \"time\": \"10:00 AM - 11:30 AM\",\n        \"department\": \"6628d4a39238900db3b61e5e\",\n        \"lecturer\": [\n            \"65844e8b6215f4553755773c\"\n        ],\n        \"student\": [\n            \"658adabbf2ae9d4ceaf477ca\"\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get My Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/course/list/mine?filter=current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"list",
+								"mine"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "Mon",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "current",
+									"description": "current or past or nothing"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get My Courses",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/course/list/mine",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"list",
+										"mine"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "633"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"279-CI1LtPuZkgamHtH0tU+uiKUkX/Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 09:57:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6628d5516813550f44f8d34d\",\n        \"courseName\": \"Introduction to Computer Science\",\n        \"courseCode\": \"CS101\",\n        \"credit\": 3,\n        \"year\": \"2024\",\n        \"term\": \"Spring\",\n        \"day\": \"Monday\",\n        \"time\": \"10:00 AM - 11:30 AM\",\n        \"department\": \"6628d4a39238900db3b61e5e\",\n        \"lecturer\": [\n            \"65844e8b6215f4553755773c\"\n        ],\n        \"student\": [\n            \"658adabbf2ae9d4ceaf477ca\"\n        ],\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6628d5dcdab5d0965035cd06\",\n        \"courseName\": \"Introduction to Computer Science\",\n        \"courseCode\": \"CS101\",\n        \"credit\": 3,\n        \"year\": \"2024\",\n        \"term\": \"Spring\",\n        \"day\": \"Monday\",\n        \"time\": \"10:00 AM - 11:30 AM\",\n        \"department\": \"6628d4a39238900db3b61e5e\",\n        \"lecturer\": [\n            \"65844e8b6215f4553755773c\"\n        ],\n        \"student\": [\n            \"658adabbf2ae9d4ceaf477ca\"\n        ],\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseName\": \"Senior Project I\",\r\n  \"courseCode\": \"CPE423\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Mon\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"6628d4a39238900db3b61e5e\",\r\n  \"lecturer\": [\"6633d2adc979bb9fd9f458bf\"],\r\n  \"student\": [\"658adabbf2ae9d4ceaf477ca\",\"658adabbf2ae9d4ceaf477ca\",\"6633d2adc979bb9fd9f458bf\",\"6633d2adc979bb9fd9f458bf\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/course/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get My Courses Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"courseName\": \"Introduction to Computer Science\",\r\n  \"courseCode\": \"CS101\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Monday\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"6628d4a39238900db3b61e5e\",\r\n  \"lecturer\": [\"65844e8b6215f4553755773c\"],\r\n  \"student\": [\"658adabbf2ae9d4ceaf477ca\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/course/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-xyOvdUCiSfl3O1BTYKpgZbBO4dE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 09:48:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"courseName\": \"Introduction to Computer Science\",\n    \"courseCode\": \"CS101\",\n    \"credit\": 3,\n    \"year\": \"2024\",\n    \"term\": \"Spring\",\n    \"day\": \"Monday\",\n    \"time\": \"10:00 AM - 11:30 AM\",\n    \"department\": \"6628d4a39238900db3b61e5e\",\n    \"lecturer\": [\n        \"65844e8b6215f4553755773c\"\n    ],\n    \"student\": [\n        \"658adabbf2ae9d4ceaf477ca\"\n    ],\n    \"_id\": \"6628d5516813550f44f8d34d\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseName\": \"Introduction to Computer Science\",\r\n  \"courseCode\": \"CS101\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Monday\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"6628d4a39238900db3b61e5e\",\r\n  \"lecturer\": [\"65844e8b6215f4553755773c\"],\r\n  \"student\": [\"658adabbf2ae9d4ceaf477ca\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/course/update/6628d5516813550f44f8d34d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"update",
+								"6628d5516813550f44f8d34d"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Course",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"courseName\": \"Introduction to Computer Science\",\r\n  \"courseCode\": \"CS101\",\r\n  \"credit\": 3,\r\n  \"year\": \"2024\",\r\n  \"term\": \"Spring\",\r\n  \"day\": \"Monday\",\r\n  \"time\": \"10:00 AM - 11:30 AM\",\r\n  \"department\": \"6628d4a39238900db3b61e5e\",\r\n  \"lecturer\": [\"65844e8b6215f4553755773c\"],\r\n  \"student\": [\"658adabbf2ae9d4ceaf477ca\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/course/update/6628d5516813550f44f8d34d",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"update",
+										"6628d5516813550f44f8d34d"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "315"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b-S8w+pE7/lyPV5JTeNDnw5fiI0kk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Apr 2024 10:02:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6628d5516813550f44f8d34d\",\n    \"courseName\": \"Introduction to Computer Science\",\n    \"courseCode\": \"CS101\",\n    \"credit\": 3,\n    \"year\": \"2024\",\n    \"term\": \"Spring\",\n    \"day\": \"Monday\",\n    \"time\": \"10:00 AM - 11:30 AM\",\n    \"department\": \"6628d4a39238900db3b61e5e\",\n    \"lecturer\": [\n        \"65844e8b6215f4553755773c\"\n    ],\n    \"student\": [\n        \"658adabbf2ae9d4ceaf477ca\"\n    ],\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/course/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course",
+									"value": "6628d5516813550f44f8d34d",
+									"type": "text"
+								},
+								{
+									"key": "Note",
+									"type": "file",
+									"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+								},
+								{
+									"key": "description",
+									"value": "test desc",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "test title",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/course/uploadNote",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"uploadNote"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Note",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "course",
+											"value": "6628d5516813550f44f8d34d",
+											"type": "text"
+										},
+										{
+											"key": "Note",
+											"type": "file",
+											"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+										},
+										{
+											"key": "description",
+											"value": "test desc",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "test title",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/course/uploadNote",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"uploadNote"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-2+S54lo7rONw/b4ThXSioNWy1u8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 May 2024 16:49:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"test title\",\n    \"description\": \"test desc\",\n    \"course\": \"6628d5516813550f44f8d34d\",\n    \"file\": [\n        \"uploads\\\\1715273372212.pdf\"\n    ],\n    \"_id\": \"663cfe9c4efb6494a2e32877\",\n    \"createdAt\": \"2024-05-09T16:49:32.234Z\",\n    \"updatedAt\": \"2024-05-09T16:49:32.234Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Note",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/course/notes/remove/663cfe9c4efb6494a2e32877",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"course",
+								"notes",
+								"remove",
+								"663cfe9c4efb6494a2e32877"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Note",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/course/notes/remove/663cfe9c4efb6494a2e32877",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"course",
+										"notes",
+										"remove",
+										"663cfe9c4efb6494a2e32877"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-eRA9GiVZL6kII4bX/HmG//anwi0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 09 May 2024 16:52:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Note deleted successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Senior Group",
+			"item": [
+				{
+					"name": "Get Group By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/66311b505174c9120bb3c411",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"66311b505174c9120bb3c411"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Group By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/66311b505174c9120bb3c411",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"66311b505174c9120bb3c411"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "520"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"208-Un2ufN063/go19hFbUVwGkx4JZY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 May 2024 18:45:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"group\": {\n        \"_id\": \"66311b505174c9120bb3c411\",\n        \"title\": \"Group 1\",\n        \"lecturer\": {\n            \"_id\": \"6633d2adc979bb9fd9f458bf\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"registerNo\": \"20122134555\",\n            \"sex\": \"male\"\n        },\n        \"students\": [\n            {\n                \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n                \"firstName\": \"munannad\",\n                \"lastName\": \"Zubi\",\n                \"registerNo\": \"20102134555\",\n                \"sex\": \"male\"\n            },\n            {\n                \"_id\": \"662565b72df8514d42e841d2\",\n                \"firstName\": \"munannad\",\n                \"lastName\": \"Zubi\",\n                \"registerNo\": \"20102224555\"\n            }\n        ],\n        \"createdAt\": \"2024-04-30T16:24:48.010Z\",\n        \"updatedAt\": \"2024-05-01T20:53:57.542Z\",\n        \"__v\": 6\n    },\n    \"reports\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Group Files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/files/66311b355174c9120bb3c40f?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"files",
+								"66311b355174c9120bb3c40f"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "title",
+									"value": "1",
+									"description": "search",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Group Files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/files/66311b355174c9120bb3c40f?page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"files",
+										"66311b355174c9120bb3c40f"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "title",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "539"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21b-jNZLGw82QflWc5Ionyp6MFBWngQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 May 2024 20:28:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reports\": [\n        {\n            \"_id\": \"6632a2c827a4177e954337fc\",\n            \"title\": \"Week 2 Report\",\n            \"description\": \"test\",\n            \"file\": [\n                \"uploads\\\\1714594504427.pdf\"\n            ],\n            \"createdAt\": \"2024-05-01T20:15:04.431Z\"\n        },\n        {\n            \"_id\": \"6632a2c927a4177e954337fe\",\n            \"title\": \"Week 2 Report\",\n            \"description\": \"test\",\n            \"file\": [\n                \"uploads\\\\1714594505277.pdf\"\n            ],\n            \"createdAt\": \"2024-05-01T20:15:05.280Z\"\n        },\n        {\n            \"_id\": \"6632a2ca27a4177e95433800\",\n            \"title\": \"Week 2 Report\",\n            \"description\": \"test\",\n            \"file\": [\n                \"uploads\\\\1714594506067.pdf\"\n            ],\n            \"createdAt\": \"2024-05-01T20:15:06.073Z\"\n        }\n    ],\n    \"page\": \"1\",\n    \"pageSize\": 10,\n    \"totalCount\": 3,\n    \"totalPages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Student Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/studentGroup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"studentGroup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Student Group",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/studentGroup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"studentGroup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "476"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1dc-nI9J++s8eoj304/v6qtytza/w70\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 18:12:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"group\": {\n        \"_id\": \"66311b355174c9120bb3c40f\",\n        \"title\": \"Engineering Faculty\",\n        \"lecturer\": {\n            \"_id\": \"65844e8b6215f4553755773c\",\n            \"firstName\": \"Prof. Mohamad\",\n            \"lastName\": \"Zubi\",\n            \"sex\": \"male\"\n        },\n        \"students\": [\n            {\n                \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n                \"firstName\": \"munannad\",\n                \"lastName\": \"Zubi\"\n            }\n        ],\n        \"createdAt\": \"2024-04-30T16:24:21.997Z\",\n        \"updatedAt\": \"2024-04-30T16:24:21.997Z\",\n        \"__v\": 0\n    },\n    \"reports\": [\n        {\n            \"_id\": \"6631309312afd133a6fc6eda\",\n            \"title\": \"Test\",\n            \"description\": \"test\",\n            \"file\": [\n                \"uploads\\\\1714499731362.json\"\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Lecturer Groups",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/lecturer/list?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"lecturer",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Lecturer Groups",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/lecturer/list?page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"lecturer",
+										"list"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "605"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25d-LgxQyIfE4/JKw3V2hkbbbB4lnD8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 04 May 2024 19:48:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"seniorGroups\": [\n        {\n            \"_id\": \"66311b355174c9120bb3c40f\",\n            \"title\": \"Engineering Faculty\",\n            \"lecturer\": \"6633d2adc979bb9fd9f458bf\",\n            \"students\": [\n                {\n                    \"_id\": \"658adabbf2ae9d4ceaf477ca\"\n                },\n                {\n                    \"_id\": \"662565b72df8514d42e841d2\"\n                }\n            ],\n            \"createdAt\": \"2024-04-30T16:24:21.997Z\",\n            \"updatedAt\": \"2024-05-01T20:54:29.905Z\",\n            \"__v\": 1\n        },\n        {\n            \"_id\": \"66311b505174c9120bb3c411\",\n            \"title\": \"Group 1\",\n            \"lecturer\": \"6633d2adc979bb9fd9f458bf\",\n            \"students\": [\n                {\n                    \"_id\": \"658adabbf2ae9d4ceaf477ca\"\n                },\n                {\n                    \"_id\": \"662565b72df8514d42e841d2\"\n                }\n            ],\n            \"createdAt\": \"2024-04-30T16:24:48.010Z\",\n            \"updatedAt\": \"2024-05-01T20:53:57.542Z\",\n            \"__v\": 6\n        }\n    ],\n    \"page\": \"1\",\n    \"pageSize\": 10,\n    \"totalCount\": 2,\n    \"totalPages\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Lecturer Students",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/lecturer/students",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"lecturer",
+								"students"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Lecturer Students",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/lecturer/students",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"lecturer",
+										"students"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1de-2nKuTMyrjL6o1odXUY+wyQBy2ys\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 May 2024 19:27:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"students\": [\n        {\n            \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"registerNo\": \"20102134555\",\n            \"sex\": \"male\"\n        },\n        {\n            \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"registerNo\": \"20102134555\",\n            \"sex\": \"male\"\n        },\n        {\n            \"_id\": \"6633d2adc979bb9fd9f458bf\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"registerNo\": \"20122134555\",\n            \"sex\": \"male\"\n        },\n        {\n            \"_id\": \"6633d2adc979bb9fd9f458bf\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"registerNo\": \"20122134555\",\n            \"sex\": \"male\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"test\",\r\n  \"lecturer\": \"6633d2adc979bb9fd9f458bf\",\r\n  \"students\": [\"658adabbf2ae9d4ceaf477ca\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/senior/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Group",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"Group 1\",\r\n  \"lecturer\": \"65844e8b6215f4553755773c\",\r\n  \"students\": [\"658adabbf2ae9d4ceaf477ca\"]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/senior/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-/sYhiSDhM6unjv7YJpGKh/OQHbk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 16:24:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Group 1\",\n    \"lecturer\": \"65844e8b6215f4553755773c\",\n    \"students\": [\n        \"658adabbf2ae9d4ceaf477ca\"\n    ],\n    \"_id\": \"66311b505174c9120bb3c411\",\n    \"createdAt\": \"2024-04-30T16:24:48.010Z\",\n    \"updatedAt\": \"2024-04-30T16:24:48.010Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Group",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"edited test\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/senior/update/664259f7014a18b717c994cc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"update",
+								"664259f7014a18b717c994cc"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Group",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"edited test\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/senior/update/664259f7014a18b717c994cc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"update",
+										"664259f7014a18b717c994cc"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b6-o0Ix5zGHlxxVct/uKrm8uSnjXts\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 May 2024 18:32:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"664259f7014a18b717c994cc\",\n    \"title\": \"edited test\",\n    \"students\": [\n        \"658adabbf2ae9d4ceaf477ca\"\n    ],\n    \"createdAt\": \"2024-05-13T18:20:39.714Z\",\n    \"updatedAt\": \"2024-05-14T18:32:21.654Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Group",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/senior/663a8395e974b918edc0898f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"663a8395e974b918edc0898f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Group",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/senior/663a8395e974b918edc0898f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"663a8395e974b918edc0898f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-V/qFsXXyZc2J1j+IzsGmRLQ1BUQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 07 May 2024 19:41:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Senior group deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":\"658adabbf2ae9d4ceaf477ca\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/senior/addStudent/66311b505174c9120bb3c411",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"addStudent",
+								"66311b505174c9120bb3c411"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Student",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\":\"658adabbf2ae9d4ceaf477ca\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/senior/addStudent/66311b505174c9120bb3c411",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"addStudent",
+										"66311b505174c9120bb3c411"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-5NvZPFPWVpCyHcgK0QDDVya6qRM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 16:26:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"group\": {\n        \"_id\": \"66311b505174c9120bb3c411\",\n        \"title\": \"Group 1\",\n        \"lecturer\": \"65844e8b6215f4553755773c\",\n        \"students\": [\n            \"658adabbf2ae9d4ceaf477ca\",\n            \"658adabbf2ae9d4ceaf477ca\"\n        ],\n        \"createdAt\": \"2024-04-30T16:24:48.010Z\",\n        \"updatedAt\": \"2024-04-30T16:26:07.520Z\",\n        \"__v\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":\"658adabbf2ae9d4ceaf477ca\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/senior/removeStudent/66311b505174c9120bb3c411",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"senior",
+								"removeStudent",
+								"66311b505174c9120bb3c411"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Remove Student",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"studentId\":\"658adabbf2ae9d4ceaf477ca\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/senior/removeStudent/66311b505174c9120bb3c411",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"senior",
+										"removeStudent",
+										"66311b505174c9120bb3c411"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "200"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c8-WWu4WAvKSgSKb7eaNP96bSB3/RQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 16:28:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"group\": {\n        \"_id\": \"66311b505174c9120bb3c411\",\n        \"title\": \"Group 1\",\n        \"lecturer\": \"65844e8b6215f4553755773c\",\n        \"students\": [],\n        \"createdAt\": \"2024-04-30T16:24:48.010Z\",\n        \"updatedAt\": \"2024-04-30T16:28:34.119Z\",\n        \"__v\": 2\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Create Report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "report",
+									"type": "file",
+									"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+								},
+								{
+									"key": "group",
+									"value": "66311b355174c9120bb3c40f",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Week 2 Report",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/report/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"report",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Report",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "report",
+											"type": "file",
+											"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+										},
+										{
+											"key": "group",
+											"value": "66311b355174c9120bb3c40f",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Week 2 Report",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/report/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"report",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-xavyMGHaRzXTJGRoHfaoltqJHHk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Apr 2024 18:25:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Week 2 Report\",\n    \"description\": \"test\",\n    \"group\": \"66311b355174c9120bb3c40f\",\n    \"file\": [\n        \"uploads\\\\1714501502233.pdf\"\n    ],\n    \"_id\": \"6631377e7e75f88215e32f45\",\n    \"createdAt\": \"2024-04-30T18:25:02.246Z\",\n    \"updatedAt\": \"2024-04-30T18:25:02.246Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Report",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/report/remove/6631309312afd133a6fc6eda",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"report",
+								"remove",
+								"6631309312afd133a6fc6eda"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Requet",
+			"item": [
+				{
+					"name": "Reply Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reply\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/request/reply/6635038f072875df8b238204",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"reply",
+								"6635038f072875df8b238204"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reply Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reply\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/request/reply/6635038f072875df8b238204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"reply",
+										"6635038f072875df8b238204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "311"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"137-mlcTdZ7ppPDw9X/kaNzvuSo5+S8\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:40:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6635038f072875df8b238204\",\n    \"type\": \"internship\",\n    \"content\": \"test\",\n    \"status\": \"replied\",\n    \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n    \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n    \"receiverReply\": \"test\",\n    \"file\": [\n        \"uploads\\\\1714750351095.pdf\"\n    ],\n    \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n    \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Request For Lecturer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/request/single/lecturer/6635038f072875df8b238204",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"single",
+								"lecturer",
+								"6635038f072875df8b238204"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Request For Lecturer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/request/single/lecturer/6635038f072875df8b238204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"single",
+										"lecturer",
+										"6635038f072875df8b238204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "659"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"293-ZnMxn9ApxVjrr9TC+t7GCYzI5WQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:49:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6635038f072875df8b238204\",\n    \"type\": \"internship\",\n    \"content\": \"test\",\n    \"status\": \"replied\",\n    \"sender\": {\n        \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n        \"firstName\": \"munannad\",\n        \"lastName\": \"Zubi\",\n        \"email\": \"example2@example.com\",\n        \"password\": \"$2b$10$7WX2QbqW/G2cCYBDu/I/velxxxBwQRKqmC2V.LxRr576Gm1i1kIHm\",\n        \"registerNo\": \"20102134555\",\n        \"phone\": \"05385441726\",\n        \"permissions\": [\n            \"Student\"\n        ],\n        \"avatarPath\": \"null\",\n        \"createdAt\": \"2023-12-26T13:52:59.927Z\",\n        \"updatedAt\": \"2023-12-26T13:52:59.927Z\",\n        \"__v\": 0,\n        \"sex\": \"male\"\n    },\n    \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n    \"receiverReply\": \"test\",\n    \"file\": [\n        \"uploads\\\\1714750351095.pdf\"\n    ],\n    \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n    \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Requests For Lecturer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/request/lecturer?page=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"lecturer"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "",
+									"description": "internship- gradeObjection- recommendationLetter",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"description": "replied- unreplied",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Requests For Lecturer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/request//lecturer/6635038f072875df8b238204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"",
+										"lecturer",
+										"6635038f072875df8b238204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "661"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"295-+RPNvDeqIONddp69kxoy1XwQZmY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:56:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6635038f072875df8b238204\",\n        \"type\": \"internship\",\n        \"content\": \"test\",\n        \"status\": \"replied\",\n        \"sender\": {\n            \"_id\": \"658adabbf2ae9d4ceaf477ca\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"email\": \"example2@example.com\",\n            \"password\": \"$2b$10$7WX2QbqW/G2cCYBDu/I/velxxxBwQRKqmC2V.LxRr576Gm1i1kIHm\",\n            \"registerNo\": \"20102134555\",\n            \"phone\": \"05385441726\",\n            \"permissions\": [\n                \"Student\"\n            ],\n            \"avatarPath\": \"null\",\n            \"createdAt\": \"2023-12-26T13:52:59.927Z\",\n            \"updatedAt\": \"2023-12-26T13:52:59.927Z\",\n            \"__v\": 0,\n            \"sex\": \"male\"\n        },\n        \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n        \"receiverReply\": \"test\",\n        \"file\": [\n            \"uploads\\\\1714750351095.pdf\"\n        ],\n        \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n        \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Send Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "type",
+									"value": "internship",
+									"description": "internship- gradeObjection- recommendationLetter",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "receiver",
+									"value": "6633d2adc979bb9fd9f458bf",
+									"description": "academicean id",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/request/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Send Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "internship",
+											"description": "internship- gradeObjection- recommendationLetter",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "receiver",
+											"value": "6633d2adc979bb9fd9f458bf",
+											"description": "academicean id",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1ef071ee-d641-4ff0-93dd-c1c3ca906c28"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/request/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"135-uEYpPPEIZ5F6hl66/DVH086DZfo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:32:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"internship\",\n    \"content\": \"test\",\n    \"status\": \"unreplied\",\n    \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n    \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n    \"receiverReply\": \"\",\n    \"file\": [\n        \"uploads\\\\1714750351095.pdf\"\n    ],\n    \"_id\": \"6635038f072875df8b238204\",\n    \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n    \"updatedAt\": \"2024-05-03T15:32:31.140Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Request For Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/request/single/student/6635038f072875df8b238204",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"single",
+								"student",
+								"6635038f072875df8b238204"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Request For Student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/request/single/student/6635038f072875df8b238204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"single",
+										"student",
+										"6635038f072875df8b238204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "673"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a1-LGbIvyFA8g55aCgfSmra7pS76dY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:53:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6635038f072875df8b238204\",\n    \"type\": \"internship\",\n    \"content\": \"test\",\n    \"status\": \"replied\",\n    \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n    \"receiver\": {\n        \"_id\": \"6633d2adc979bb9fd9f458bf\",\n        \"firstName\": \"munannad\",\n        \"lastName\": \"Zubi\",\n        \"email\": \"testacademician@karabuk.edu.tr\",\n        \"password\": \"$2b$10$uyfJDBGRkGzAn5AOz8r2eub04n6vuM.97GnK420upHJA1tG5Zjn6m\",\n        \"registerNo\": \"20122134555\",\n        \"phone\": \"05385441726\",\n        \"permissions\": [\n            \"Academician\"\n        ],\n        \"avatarPath\": \"null\",\n        \"createdAt\": \"2024-05-02T17:51:41.174Z\",\n        \"updatedAt\": \"2024-05-02T17:57:12.281Z\",\n        \"__v\": 1,\n        \"sex\": \"male\"\n    },\n    \"receiverReply\": \"test\",\n    \"file\": [\n        \"uploads\\\\1714750351095.pdf\"\n    ],\n    \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n    \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Requests For Student",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3060/api/request/student/6635038f072875df8b238204?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"student",
+								"6635038f072875df8b238204"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "",
+									"description": "internship- gradeObjection- recommendationLetter",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"description": "replied- unreplied",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Requests For Student",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3060/api/request/student/6635038f072875df8b238204",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"student",
+										"6635038f072875df8b238204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "675"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a3-j48sx1LqYltzv+jnBy//KhTT+8k\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 15:55:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6635038f072875df8b238204\",\n        \"type\": \"internship\",\n        \"content\": \"test\",\n        \"status\": \"replied\",\n        \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n        \"receiver\": {\n            \"_id\": \"6633d2adc979bb9fd9f458bf\",\n            \"firstName\": \"munannad\",\n            \"lastName\": \"Zubi\",\n            \"email\": \"testacademician@karabuk.edu.tr\",\n            \"password\": \"$2b$10$uyfJDBGRkGzAn5AOz8r2eub04n6vuM.97GnK420upHJA1tG5Zjn6m\",\n            \"registerNo\": \"20122134555\",\n            \"phone\": \"05385441726\",\n            \"permissions\": [\n                \"Academician\"\n            ],\n            \"avatarPath\": \"null\",\n            \"createdAt\": \"2024-05-02T17:51:41.174Z\",\n            \"updatedAt\": \"2024-05-02T17:57:12.281Z\",\n            \"__v\": 1,\n            \"sex\": \"male\"\n        },\n        \"receiverReply\": \"test\",\n        \"file\": [\n            \"uploads\\\\1714750351095.pdf\"\n        ],\n        \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n        \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/request/filter?status=replied",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": null,
+									"description": "internship- gradeObjection- recommendationLetter",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "replied",
+									"description": "replied- unreplied"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/request/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "",
+											"description": "internship- gradeObjection- recommendationLetter",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "replied",
+											"description": "replied- unreplied",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-pZ3GkAc6GG7xMD8bvVBDuV1vgjs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 16:04:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6635038f072875df8b238204\",\n        \"type\": \"internship\",\n        \"content\": \"test\",\n        \"status\": \"replied\",\n        \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n        \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n        \"receiverReply\": \"test\",\n        \"file\": [\n            \"uploads\\\\1714750351095.pdf\"\n        ],\n        \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n        \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filter Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/request/filter?status=replied",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"request",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": null,
+									"description": "internship- gradeObjection- recommendationLetter",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "replied",
+									"description": "replied- unreplied"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/api/request/filter",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"api",
+										"request",
+										"filter"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "",
+											"description": "internship- gradeObjection- recommendationLetter",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "replied",
+											"description": "replied- unreplied",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"139-pZ3GkAc6GG7xMD8bvVBDuV1vgjs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 03 May 2024 16:04:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6635038f072875df8b238204\",\n        \"type\": \"internship\",\n        \"content\": \"test\",\n        \"status\": \"replied\",\n        \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n        \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n        \"receiverReply\": \"test\",\n        \"file\": [\n            \"uploads\\\\1714750351095.pdf\"\n        ],\n        \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n        \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chatbot",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"prompt\" : \"ders alma nedir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/bot/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"bot",
+								"test"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "test",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"prompt\" : \"ders alma nedir\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3060/bot/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3060",
+									"path": [
+										"bot",
+										"test"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "695"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b7-yd2+GeDHew5hx4v6UP+DW3rZVYw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 23 Apr 2024 18:25:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"response\": \"Ders alma, öğrencilerin her dönem başında danışmanları nezaretinde öğrenci otomasyonu üzerinden gerçekleştirdikleri işlemdir. Öğrenciler dersleri kayıt tarihlerine bakılmaksızın üç farklı sınırda alabilirler. Birinci sınıfa kayıtlı olanlar ilk iki yarıyılın tüm derslerini olmak zorundayken, üçüncü yarıyıldan itibaren en az 30, en fazla 40 AKTS'ye kadar ders alabilirler. 3.00 ve üstü GANO sahibi olup, önceki yarıyıllardan başarısız dersleri bulunmayan öğrenciler, kontenjanı aşmamak kaydıyla 40 AKTS'nin üzerine çıkabilirler. Yatay veya dikey geçiş ile kayıt yaptıran öğrenciler de 40 AKTS'ye kadar ders alabilirler.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "new chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\" : \"staj\",\r\n    \"prompt\" : \"Ders alma nedir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3060/api/bot/newChat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3060",
+							"path": [
+								"api",
+								"bot",
+								"newChat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
