@@ -1,7 +1,8 @@
 {
 	"info": {
 		"_postman_id": "3230e232-c4e3-4b00-a5ab-feb7885e9001",
-		"name": "Student Automation",
+		"name": "E-Campus",
+		"description": "This project is part of a comprehensive suite that includes the web application, backend services, and mobile applications designed to streamline academic processes and enhance communication between students and lecturers. Developed by a dedicated team of Computer Engineering students from Karabuk University, this system aims to provide a seamless academic experience through advanced automation and efficient communication tools.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "28985639",
 		"_collection_link": "https://universal-moon-734159.postman.co/workspace/New-Team-Workspace~ed1bc44c-1ae6-431c-ace3-ab04bac8b4f0/collection/24940764-3230e232-c4e3-4b00-a5ab-feb7885e9001?action=share&source=collection_link&creator=28985639"
@@ -25,12 +26,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/auth/register",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/register",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -63,12 +62,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/auth/login",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/login",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -162,12 +159,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/auth/logout",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/logout",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -189,12 +184,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3060/api/auth/",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -227,14 +220,11 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3060/api/auth/current",
-							"protocol": "http",
+							"raw": "{{URL}}api/auth/current",
 							"host": [
-								"localhost"
+								"{{URL}}api"
 							],
-							"port": "3060",
 							"path": [
-								"api",
 								"auth",
 								"current"
 							]
@@ -324,12 +314,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/auth/addRole/658449741c2c863c8b2cd423",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/addRole/658449741c2c863c8b2cd423",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -362,12 +350,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/auth/deleteRole/658449741c2c863c8b2cd423",
-							"protocol": "http",
+							"raw": "{{URL}}/api/auth/deleteRole/658449741c2c863c8b2cd423",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"auth",
@@ -411,12 +397,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3060/api/student/current",
-									"protocol": "http",
+									"raw": "{{URL}}/api/student/current",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"student",
@@ -524,12 +508,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3060/api/student/create",
-									"protocol": "http",
+									"raw": "{{URL}}/api/student/create",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"student",
@@ -640,12 +622,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3060/api/academician/create",
-									"protocol": "http",
+									"raw": "{{URL}}/api/academician/create",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"academician",
@@ -667,12 +647,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3060/api/academician/current",
-									"protocol": "http",
+									"raw": "{{URL}}/api/academician/current",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"academician",
@@ -694,12 +672,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3060/api/academician/current",
-									"protocol": "http",
+									"raw": "{{URL}}/api/academician/current",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"academician",
@@ -726,12 +702,10 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:3060/api/admin/current",
-									"protocol": "http",
+									"raw": "{{URL}}/api/admin/current",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"admin",
@@ -762,12 +736,10 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3060/api/admin/create",
-									"protocol": "http",
+									"raw": "{{URL}}/api/admin/create",
 									"host": [
-										"localhost"
+										"{{URL}}"
 									],
-									"port": "3060",
 									"path": [
 										"api",
 										"admin",
@@ -790,12 +762,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/faculty/6628d47f9238900db3b61e5c",
-							"protocol": "http",
+							"raw": "{{URL}}/api/faculty/6628d47f9238900db3b61e5c",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"faculty",
@@ -871,12 +841,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/faculty/list",
-							"protocol": "http",
+							"raw": "{{URL}}/api/faculty/list",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"faculty",
@@ -961,12 +929,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/faculty/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/faculty/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"faculty",
@@ -1060,12 +1026,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/faculty/update",
-							"protocol": "http",
+							"raw": "{{URL}}/api/faculty/update",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"faculty",
@@ -1081,12 +1045,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/faculty/:id",
-							"protocol": "http",
+							"raw": "{{URL}}/api/faculty/:id",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"faculty",
@@ -1113,12 +1075,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/department/6628d4a39238900db3b61e5e",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/6628d4a39238900db3b61e5e",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1211,12 +1171,10 @@
 							}
 						],
 						"url": {
-							"raw": "http://localhost:3060/api/department/userDepartment",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/userDepartment",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1299,12 +1257,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/department/list",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/list",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1389,12 +1345,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/department/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1488,12 +1442,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/department/update",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/update",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1509,12 +1461,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/department/:id",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/:id",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1545,12 +1495,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/department/addWorker/662d4c2d1fbb4f66350ab8c6",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/addWorker/662d4c2d1fbb4f66350ab8c6",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1637,12 +1585,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/department/deleteWorker/662d4c2d1fbb4f66350ab8c6?workerId=662d4c2d1fbb4f66350ab8c7",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/deleteWorker/662d4c2d1fbb4f66350ab8c6?workerId=662d4c2d1fbb4f66350ab8c7",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1741,12 +1687,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/department/addCorse/662d50181f38aaa936d3468f",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/addCorse/662d50181f38aaa936d3468f",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1833,12 +1777,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/department/deleteCorse/662d50181f38aaa936d3468f?corseId=662ff25854c05aaf5e04d13b",
-							"protocol": "http",
+							"raw": "{{URL}}/api/department/deleteCorse/662d50181f38aaa936d3468f?corseId=662ff25854c05aaf5e04d13b",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"department",
@@ -1933,12 +1875,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/course/6628d5516813550f44f8d34d",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/6628d5516813550f44f8d34d",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2014,12 +1954,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/course/notes/6628d5516813550f44f8d34d?page=1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/notes/6628d5516813550f44f8d34d?page=1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2119,12 +2057,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/course/list",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/list",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2217,12 +2153,10 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/course/list/mine?filter=current",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/list/mine?filter=current",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2321,12 +2255,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/course/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2420,12 +2352,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/course/update/6628d5516813550f44f8d34d",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/update/6628d5516813550f44f8d34d",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2512,12 +2442,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/course/:id",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/:id",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2564,12 +2492,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/course/uploadNote",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/uploadNote",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2680,12 +2606,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/course/notes/remove/663cfe9c4efb6494a2e32877",
-							"protocol": "http",
+							"raw": "{{URL}}/api/course/notes/remove/663cfe9c4efb6494a2e32877",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"course",
@@ -2770,12 +2694,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/66311b505174c9120bb3c411",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/66311b505174c9120bb3c411",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -2851,12 +2773,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/files/66311b355174c9120bb3c40f?page=1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/files/66311b355174c9120bb3c40f?page=1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -2967,12 +2887,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/studentGroup",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/studentGroup",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3058,12 +2976,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/lecturer/list?page=1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/lecturer/list?page=1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3163,12 +3079,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/lecturer/students",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/lecturer/students",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3265,12 +3179,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/senior/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3364,12 +3276,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/senior/update/664259f7014a18b717c994cc",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/update/664259f7014a18b717c994cc",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3456,12 +3366,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/senior/663a8395e974b918edc0898f",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/663a8395e974b918edc0898f",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3546,12 +3454,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/senior/addStudent/66311b505174c9120bb3c411",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/addStudent/66311b505174c9120bb3c411",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3647,12 +3553,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/senior/removeStudent/66311b505174c9120bb3c411",
-							"protocol": "http",
+							"raw": "{{URL}}/api/senior/removeStudent/66311b505174c9120bb3c411",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"senior",
@@ -3769,12 +3673,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/report/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/report/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"report",
@@ -3875,12 +3777,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/report/remove/6631309312afd133a6fc6eda",
-							"protocol": "http",
+							"raw": "{{URL}}/api/report/remove/6631309312afd133a6fc6eda",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"report",
@@ -3921,12 +3821,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/request/reply/6635038f072875df8b238204",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/reply/6635038f072875df8b238204",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4023,12 +3921,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/request/single/lecturer/6635038f072875df8b238204",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/single/lecturer/6635038f072875df8b238204",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4118,12 +4014,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/request/lecturer?page=2",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/lecturer?page=2",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4256,12 +4150,10 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/request/create",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/create",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4374,12 +4266,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/request/single/student/6635038f072875df8b238204",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/single/student/6635038f072875df8b238204",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4469,12 +4359,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3060/api/request/student/6635038f072875df8b238204?page=1",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/student/6635038f072875df8b238204?page=1",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4592,151 +4480,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/api/request/filter?status=replied",
-							"protocol": "http",
+							"raw": "{{URL}}/api/request/filter?status=replied",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
-							"path": [
-								"api",
-								"request",
-								"filter"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": null,
-									"description": "internship- gradeObjection- recommendationLetter",
-									"disabled": true
-								},
-								{
-									"key": "status",
-									"value": "replied",
-									"description": "replied- unreplied"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Filter",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:3060/api/request/filter",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "3060",
-									"path": [
-										"api",
-										"request",
-										"filter"
-									],
-									"query": [
-										{
-											"key": "type",
-											"value": "",
-											"description": "internship- gradeObjection- recommendationLetter",
-											"disabled": true
-										},
-										{
-											"key": "status",
-											"value": "replied",
-											"description": "replied- unreplied",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "313"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"139-pZ3GkAc6GG7xMD8bvVBDuV1vgjs\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 03 May 2024 16:04:48 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"_id\": \"6635038f072875df8b238204\",\n        \"type\": \"internship\",\n        \"content\": \"test\",\n        \"status\": \"replied\",\n        \"sender\": \"658adabbf2ae9d4ceaf477ca\",\n        \"receiver\": \"6633d2adc979bb9fd9f458bf\",\n        \"receiverReply\": \"test\",\n        \"file\": [\n            \"uploads\\\\1714750351095.pdf\"\n        ],\n        \"createdAt\": \"2024-05-03T15:32:31.140Z\",\n        \"updatedAt\": \"2024-05-03T15:40:55.343Z\",\n        \"__v\": 0\n    }\n]"
-						}
-					]
-				},
-				{
-					"name": "Filter Copy",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjMzZDJhZGM5NzliYjlmZDlmNDU4YmYiLCJlbWFpbCI6InRlc3RhY2FkZW1pY2lhbkBrYXJhYnVrLmVkdS50ciIsInJvbGVzIjpbIkFjYWRlbWljaWFuIl0sImlhdCI6MTcxNDc1MTAzOCwiZXhwIjoxNzE3MzQzMDM4fQ.3vZD6O62Qbryqgj5GviegVAQtmTjWE-s4X3VeLo4Lc8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3060/api/request/filter?status=replied",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3060",
 							"path": [
 								"api",
 								"request",
@@ -4848,6 +4595,101 @@
 			"name": "Chatbot",
 			"item": [
 				{
+					"name": "New Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\" : \"internship\", // internship- training- marks- credit- manners\r\n    \"prompt\" : \"Ders alma nedir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/bot/newChat",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"bot",
+								"newChat"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Chat",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"topic\" : \"internship\", // internship- training- marks- credit- manners\r\n    \"prompt\" : \"Ders alma nedir\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/bot/newChat",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"bot",
+										"newChat"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "489"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e9-I8610Au0greircKXE/5TgrCfpEA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 22 May 2024 00:49:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"answer\": \"Ders alma, eğitim amaçlı, pratiğe dayalı öğrenme uygulamasıdır. Öğrencilere, teorik derslerde öğrendiklerini gerçek iş ortamında uygulayıp pekiştirme fırsatı sağlar. Ayrıca, mesleki gelişimini destekler, iş piyasasındaki boşlukları kapatmaya yardımcı olur ve mezun olduktan sonra iş bulma olasılığını artırır. Bu şekilde, öğrenciler mesleki bilgilerini geliştirir, becerilerini geliştirir ve iş hayatına hazırlıklı hale gelirler.\"\n}"
+						}
+					]
+				},
+				{
 					"name": "test",
 					"request": {
 						"method": "POST",
@@ -4862,12 +4704,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3060/bot/test",
-							"protocol": "http",
+							"raw": "{{URL}}/bot/test",
 							"host": [
-								"localhost"
+								"{{URL}}"
 							],
-							"port": "3060",
 							"path": [
 								"bot",
 								"test"
@@ -4943,36 +4783,6 @@
 							"body": "{\n    \"response\": \"Ders alma, öğrencilerin her dönem başında danışmanları nezaretinde öğrenci otomasyonu üzerinden gerçekleştirdikleri işlemdir. Öğrenciler dersleri kayıt tarihlerine bakılmaksızın üç farklı sınırda alabilirler. Birinci sınıfa kayıtlı olanlar ilk iki yarıyılın tüm derslerini olmak zorundayken, üçüncü yarıyıldan itibaren en az 30, en fazla 40 AKTS'ye kadar ders alabilirler. 3.00 ve üstü GANO sahibi olup, önceki yarıyıllardan başarısız dersleri bulunmayan öğrenciler, kontenjanı aşmamak kaydıyla 40 AKTS'nin üzerine çıkabilirler. Yatay veya dikey geçiş ile kayıt yaptıran öğrenciler de 40 AKTS'ye kadar ders alabilirler.\"\n}"
 						}
 					]
-				},
-				{
-					"name": "new chat",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"topic\" : \"staj\",\r\n    \"prompt\" : \"Ders alma nedir\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3060/api/bot/newChat",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3060",
-							"path": [
-								"api",
-								"bot",
-								"newChat"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		}
